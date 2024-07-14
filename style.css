@@ -1,0 +1,614 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap");
+@font-face {
+  font-family: godofwar;
+  src: url(GODOFWAR.TTF);
+}
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+h2 {
+  font-family: godofwar;
+}
+main {
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0)),
+    url(Bg-img/wp11690883-god-of-war-ragnarok-uhd-wallpapers.png);
+  background-size: cover;
+  background-position: center;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1rem;
+}
+a:hover {
+  font-weight: bolder;
+  color: #0c375f;
+}
+/* HEADER */
+header {
+  position: relative;
+  padding: 0 2rem;
+}
+.navbar {
+  width: 100%;
+  height: 10vh;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navbar .logo img {
+  margin-top: 11px;
+  margin-left: -10px;
+}
+.navbar .links {
+  display: flex;
+  gap: 2rem;
+  margin-left: -90px;
+}
+.navbar .toggle-btn {
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: none;
+}
+.action-btn {
+  background-color: #185894;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: scale 0.2 ease;
+}
+.action-btn:hover {
+  scale: 1.05;
+  color: white;
+  background-color: #0c375f;
+}
+.action-btn:active {
+  scale: 0.95;
+}
+
+/* DROPDOWN MENU  */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  right: 2rem;
+  top: 10vh;
+  height: 0;
+  width: 300px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.dropdown-menu.open {
+  height: 300px;
+}
+.dropdown-menu li {
+  padding: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.dropdown-menu .action-btn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* HOME */
+#home {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: black;
+}
+#home h1 {
+  font-family: godofwar;
+  margin-top: 70px;
+  font-size: 5rem;
+  color: #fff;
+  text-shadow: 5px 5px rgba(0, 0, 0, 0.5);
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+  transition: 0.7s;
+}
+#home h1:hover {
+  text-shadow: none;
+  -webkit-text-stroke: 2px white;
+  color: transparent;
+}
+#home h3 {
+  margin-top: -20px;
+  color: rgb(255, 255, 255);
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* ABOUT */
+#about {
+  width: 100%;
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 1),
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 0)
+    ),
+    url(Bg-img/868407.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.about-head {
+  width: 100%;
+  text-align: center;
+  padding: 0 20px;
+  margin-bottom: 40px;
+  color: #185894;
+}
+.about-head h2 {
+  padding: 40px 0 20px 0;
+  font-size: 2.5rem;
+  text-shadow: 3px 3px rgb(46, 46, 46);
+}
+.about-head h4 {
+  padding: 0 10px;
+  font-size: 15px;
+  color: #232c35;
+}
+.about-body {
+  padding: 2rem 2rem 0 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.about-body-img {
+  align-self: flex-end;
+}
+.about-body-img img {
+  margin-bottom: -7px;
+  height: 550px;
+}
+.about-body-text {
+  text-align: left;
+  color: white;
+  padding: 20px;
+  align-self: start;
+  justify-content: space-between;
+}
+.about-body-text h3 {
+  color: white;
+  font-size: 1.5rem;
+}
+.about-body-text p {
+  font-size: 14px;
+}
+
+/* GAMES */
+#games {
+  margin: 0;
+  padding-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  background-color: #f4f4f4;
+}
+.games-head {
+  text-align: center;
+  margin: 20px 0;
+}
+.games-head h2 {
+  padding-top: 30px;
+  font-size: 3rem;
+  color: #185894;
+  text-shadow: 3px 3px rgb(46, 46, 46);
+}
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 20px;
+  padding: 10px;
+  width: 100%;
+  max-width: 1200px;
+}
+.card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+.card:hover {
+  transform: scale(1.05);
+}
+.card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.card-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+.card-content h3 {
+  margin: 0;
+  font-size: 1.2em;
+}
+.card-content button {
+  margin-top: 10px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #185894;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.card-content button:hover {
+  background-color: #0c375f;
+}
+
+/* VIDEO  */
+#vid {
+  width: 100%;
+  background: linear-gradient(#0c375f, #185894);
+  color: white;
+}
+.vid-head h2 {
+  text-align: center;
+  color: white;
+  font-size: 2.5rem;
+  text-shadow: 3px 3px rgb(95, 95, 95);
+  padding: 40px 0;
+}
+.vid-body {
+  gap: 20px;
+  margin: 0 200px;
+  padding-bottom: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.vid-text {
+  align-self: flex-start;
+}
+.vid-text a {
+  background-color: white;
+  color: #0c375f;
+  border: 2px solid black;
+}
+.vid-text h3 {
+  font-size: 1.5rem;
+}
+.vid-text ul li {
+  list-style: square;
+}
+.vid-video video {
+  border: 2px solid white;
+  height: 330px;
+}
+
+/* GALLERY */
+#gallery {
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9)),
+    url(Bg-img/blck\ back.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.gallery-head {
+  text-align: center;
+  color: white;
+  padding: 40px 20px 20px 20px;
+}
+.gallery-head h2 {
+  font-size: 2.5rem;
+  text-shadow: 3px 3px rgb(95, 95, 95);
+  padding-bottom: 10px;
+}
+.gallery-head h4 {
+  font-size: 14px;
+}
+.gallery-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100%;
+  padding-bottom: 60px;
+}
+.container {
+  padding: 2rem;
+}
+
+.slider-wrapper {
+  position: relative;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.slider {
+  display: flex;
+  aspect-ratio: 16/ 7;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+  border-radius: 0.5rem;
+  -ms-overflow-style: none; /* Hide scrollbar IE and Edge */
+  scrollbar-width: none; /* Hide scrollbar Firefox */
+}
+
+.slider::-webkit-scrollbar {
+  display: none;
+}
+
+.slider img {
+  flex: 1 0 100%;
+  scroll-snap-align: start;
+  object-fit: cover;
+}
+
+.slider-nav {
+  display: flex;
+  column-gap: 2rem;
+  position: absolute;
+  bottom: 1.25rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.slider-nav a {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background-color: #fff;
+  opacity: 0.75;
+  transition: opacity ease 250ms;
+}
+
+.slider-nav a:hover {
+  opacity: 1;
+}
+
+/* COMMUNITY */
+#community {
+  width: 100%;
+  background-color: white;
+}
+.community-head {
+  text-align: center;
+}
+.community-head h2 {
+  padding: 40px 0;
+  font-size: 2.5rem;
+  text-shadow: 3px 3px rgb(95, 95, 95);
+}
+.community-body {
+  display: flex;
+  align-items: center;
+  padding: 10px 240px 60px 240px;
+  gap: 60px;
+}
+.community-body-img {
+  display: flex;
+  gap: 20px;
+}
+.community-body-img img {
+  width: 220px;
+  height: 180px;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+.community-logo a {
+  font-size: 45px;
+  color: black;
+  letter-spacing: 25px;
+}
+.community-body-text {
+  align-self: flex-start;
+}
+.community-body-text h3 {
+  font-size: 1.5rem;
+}
+
+/* FOOTER  */
+footer {
+  width: 100%;
+  background-color: rgb(46, 46, 46);
+  padding: 0 40px;
+  color: white;
+}
+footer p {
+  font-size: 12px;
+  cursor: pointer;
+  padding-bottom: 4px;
+}
+.footer-logo {
+  padding: 20px 0 10px 0;
+}
+.footer-logo img {
+  width: 240px;
+}
+.footer-body {
+  padding: 10px 0;
+  /* padding-left: -200px; */
+  display: flex;
+  /* align-items: self-start; */
+  justify-content: space-around;
+}
+.connect a {
+  font-size: 24px;
+  letter-spacing: 10px;
+}
+.connect a:hover {
+  color: black;
+}
+.copyright {
+  padding: 20px 0 40px 0;
+  text-align: center;
+}
+.copyright p {
+  font-size: 14px;
+}
+.copyright a {
+  font-size: 14px;
+}
+
+/* RESPONSIVE NAVBAR */
+@media (max-width: 1024px) {
+  .navbar .links,
+  .navbar .action-btn {
+    display: none;
+  }
+
+  .navbar .toggle-btn {
+    display: block;
+  }
+
+  .dropdown-menu {
+    display: block;
+  }
+  .about-body {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .about-body-img img {
+    height: 450px;
+  }
+
+  .vid-body {
+    gap: 20px;
+    margin: 0 80px;
+    flex-direction: column-reverse;
+  }
+  .vid-video video {
+    height: 280px;
+  }
+
+  .slider {
+    aspect-ratio: 2.35/ 1;
+  }
+  .community-body {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 576px) {
+  .dropdown-menu {
+    left: 2rem;
+    width: unset;
+  }
+  main {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0)),
+      url(Bg-img/god-of-war-ragnarök-and-mobile-wallpaper-2022-v0-925f2g1gt6a91.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+
+  #home h1 {
+    margin-top: -120px;
+    font-size: 3rem;
+    text-shadow: 3px 3px rgba(0, 0, 0, 0.5);
+  }
+
+  .about-head h2 {
+    padding-top: 30px;
+    font-size: 2.5rem;
+  }
+
+  .about-body {
+    padding: 0;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .about-body-img img {
+    height: 280px;
+  }
+  .about-body-text {
+    box-shadow: none;
+  }
+  .about-body-text h3 {
+    font-size: 1.5rem;
+  }
+
+  .games-head h2 {
+    padding-top: 30px;
+    font-size: 2.5rem;
+  }
+  .vid-head h2 {
+    font-size: 2rem;
+  }
+  .vid-body {
+    gap: 10px;
+    margin: 0 40px;
+    flex-direction: column-reverse;
+  }
+  .vid-video video {
+    height: 190px;
+  }
+  .gallery-head h2 {
+    font-size: 2rem;
+  }
+  .container {
+    padding: 5px;
+    margin-top: 30px;
+  }
+  .slider {
+    aspect-ratio: 16/ 10;
+  }
+  .slider-nav a {
+    width: 0.5rem;
+    height: 0.5rem;
+  }
+  .community-head h2 {
+    font-size: 2.2rem;
+  }
+  .community-body {
+    flex-direction: column;
+    padding: 30px 40px;
+  }
+  .community-body-img img {
+    width: 160px;
+    height: 120px;
+    border: 2px solid black;
+    border-radius: 5px;
+  }
+  footer {
+    padding: 0 18px;
+  }
+  .footer-logo img {
+    width: 180px;
+  }
+  .footer-body {
+    flex-direction: column;
+  }
+  .column {
+    padding-bottom: 15px;
+  }
+}
